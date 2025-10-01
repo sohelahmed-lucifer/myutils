@@ -1,0 +1,10 @@
+Enter X, W1, b1, W2, b2
+# Compute first layer output
+z1 = np.dot(X, W1) + b1
+a1 = np.maximum(0, z1)  # ReLU
+# Layer 2
+z2 = np.dot(a1, W2) + b2
+sigmoid_out = 1 / (1 + np.exp(-z2))
+relu_out = np.maximum(0, z2)
+
+z2, sigmoid_out, relu_out
